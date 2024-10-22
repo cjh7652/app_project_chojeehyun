@@ -8,27 +8,25 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const Upcoming = () => {
-	const APIKEY=process.env.REACT_APP_MOVIE_API_KEY;
+	/* const APIKEY=process.env.REACT_APP_API_KEY; */
 	const [upcomingMovies, setUpcomingMovies] = useState([]);
 	const [isLoading, setLoading]= useState(true);
 
-	const fetchUrl= `https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKEY}&language=ko-KR`
 
-	
-	useEffect(()=>{
-		const getMovies = async () =>{
-			try{
-				const response= await axios.get(fetchUrl);
-				setUpcomingMovies(response.data.results)
-				/* console.log(response.data); */
-				setLoading(false);
-			}catch(err){
-				console.error('Error : ', err);
-				setLoading(false);
-			}
+	const getMovies = async () =>{
+		try{
+			const response= await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=546c72b99cf64514c2c03c7ef473011b&language=ko-KR`);
+			setUpcomingMovies(response.data.results)
+			/* console.log(response.data); */
+			setLoading(false);
+		}catch(err){
+			console.error('Error : ', err);
+			setLoading(false);
 		}
+	}
+	useEffect(()=>{
 		getMovies();
-	}, [fetchUrl]);
+	}, []);
 
 	/* const getRandomMovie = () =>{
 		const randomIndex=Math.floor(Math.random() * upcomingMovies.length);
