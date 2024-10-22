@@ -11,23 +11,24 @@ const Home = () => {
 	const [visibleMovies, setVisibleMovies]=useState(6);
 	const moviesPerPage=3;
 
-	const getMovies = async () =>{
-		try{
-			const response= await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKEY}&language=ko-KR`);
-			setAppMovie(response.data.results)
-			/* console.log(response.data) */
-			setLoading(false)
-
-		}catch(error){
-			console.log('Error:',error )
-			setLoading(false)
-		}
-	}
+	const fetchUrl= `https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKEY}&language=ko-KR`
 
 
 	useEffect(()=>{
+		const getMovies = async () =>{
+			try{
+				const response= await axios.get(fetchUrl);
+				setAppMovie(response.data.results)
+				/* console.log(response.data) */
+				setLoading(false)
+	
+			}catch(error){
+				console.log('Error:',error )
+				setLoading(false)
+			}
+		}
 		getMovies();
-	}, [APIKEY]);
+	}, [fetchUrl]);
 
 	const handleLodeMore=()=>{
 		setVisibleMovies((prevVisible) =>prevVisible+moviesPerPage );

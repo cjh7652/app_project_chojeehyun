@@ -12,21 +12,23 @@ const Upcoming = () => {
 	const [upcomingMovies, setUpcomingMovies] = useState([]);
 	const [isLoading, setLoading]= useState(true);
 
+	const fetchUrl= `https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKEY}&language=ko-KR`
 
-	const getMovies = async () =>{
-		try{
-			const response= await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKEY}&language=ko-KR`);
-			setUpcomingMovies(response.data.results)
-			/* console.log(response.data); */
-			setLoading(false);
-		}catch(err){
-			console.error('Error : ', err);
-			setLoading(false);
-		}
-	}
+	
 	useEffect(()=>{
+		const getMovies = async () =>{
+			try{
+				const response= await axios.get(fetchUrl);
+				setUpcomingMovies(response.data.results)
+				/* console.log(response.data); */
+				setLoading(false);
+			}catch(err){
+				console.error('Error : ', err);
+				setLoading(false);
+			}
+		}
 		getMovies();
-	}, [APIKEY]);
+	}, [fetchUrl]);
 
 	/* const getRandomMovie = () =>{
 		const randomIndex=Math.floor(Math.random() * upcomingMovies.length);

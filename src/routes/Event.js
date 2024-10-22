@@ -7,13 +7,14 @@ const Event = () => {
 	const {id}=useParams();
 	const [eventMovie, setEventMovie]=useState(null);
 	const [loading, setLoading]=useState(true);
+	const fetchUrl= `https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}&language=ko-KR`
 	useEffect(()=>{
-		axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}&language=ko-KR`).then(response => {
+		axios.get(fetchUrl).then(response => {
 			setEventMovie(response.data)
 			console.log(response.data)
 			setLoading(false)
 		})
-	}, [id, APIKEY]);
+	}, [fetchUrl]);
 	return (
 		<div className='eventWrap'>
 			{

@@ -7,14 +7,14 @@ const About = () => {
 	const {id} = useParams();
 	const [loading, setLoading]=useState(true);
 	const [appM, setAppM]=useState(null);
-	 
+	 const fetchUrl= `https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}&language=ko-KR`
 	useEffect(() =>{
-        axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}&language=ko-KR`).then(res => {
+        axios.get(fetchUrl).then(res => {
             console.log(res.data); 
 			setAppM(res.data);
 			setLoading(false);
         })
-    }, [id]);
+    }, [fetchUrl]);
 
 	return (
 		<div className='aboutWrap'>
