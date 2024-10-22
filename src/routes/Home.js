@@ -11,7 +11,7 @@ const Home = () => {
 	const [visibleMovies, setVisibleMovies]=useState(6);
 	const moviesPerPage=3;
 
-	const fetchUrl= `https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKEY}&language=ko-KR`
+	const fetchUrl= `https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKEY}&language=ko-KR`;
 
 
 	useEffect(()=>{
