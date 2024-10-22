@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/app_project_chojeehyun/static/css/main.6bc99c31.css",
+    "main.js": "/app_project_chojeehyun/static/js/main.5c57735d.js",
+    "index.html": "/app_project_chojeehyun/index.html",
+    "main.6bc99c31.css.map": "/app_project_chojeehyun/static/css/main.6bc99c31.css.map",
+    "main.5c57735d.js.map": "/app_project_chojeehyun/static/js/main.5c57735d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bc99c31.css",
+    "static/js/main.5c57735d.js"
+  ]
+}
