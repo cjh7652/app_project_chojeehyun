@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/app_project_chojeehyun/static/css/main.6bc99c31.css",
-    "main.js": "/app_project_chojeehyun/static/js/main.68670515.js",
+    "main.js": "/app_project_chojeehyun/static/js/main.6b2ca914.js",
     "index.html": "/app_project_chojeehyun/index.html",
     "main.6bc99c31.css.map": "/app_project_chojeehyun/static/css/main.6bc99c31.css.map",
-    "main.68670515.js.map": "/app_project_chojeehyun/static/js/main.68670515.js.map"
+    "main.6b2ca914.js.map": "/app_project_chojeehyun/static/js/main.6b2ca914.js.map"
   },
   "entrypoints": [
     "static/css/main.6bc99c31.css",
-    "static/js/main.68670515.js"
+    "static/js/main.6b2ca914.js"
   ]
 }
