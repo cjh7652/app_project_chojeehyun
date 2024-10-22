@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const Upcoming = () => {
-	const APIKEY=process.env.REACT_APP_API_KEY;
+	const APIKEY=process.env.REACT_APP_MOVIE_API_KEY;
 	const [upcomingMovies, setUpcomingMovies] = useState([]);
 	const [isLoading, setLoading]= useState(true);
 

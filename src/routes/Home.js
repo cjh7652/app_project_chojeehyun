@@ -5,7 +5,7 @@ import Appmovie from '../components/Appmovie';
 import Upcoming from '../components/Upcoming';
 
 const Home = () => {
-	const APIKEY=process.env.REACT_APP_API_KEY;
+	const APIKEY=process.env.REACT_APP_MOVIE_API_KEY;
 	const [appMovie, setAppMovie] = useState([]);
 	const [isLoading, setLoading]= useState(true);
 	const [visibleMovies, setVisibleMovies]=useState(6);

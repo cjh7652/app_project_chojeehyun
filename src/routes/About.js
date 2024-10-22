@@ -3,7 +3,7 @@ import axios from 'axios';
 import {useParams} from 'react-router-dom';
 
 const About = () => {
-	const APIKEY=process.env.REACT_APP_API_KEY;
+	const APIKEY=process.env.REACT_APP_MOVIE_API_KEY;
 	const {id} = useParams();
 	const [loading, setLoading]=useState(true);
 	const [appM, setAppM]=useState(null);

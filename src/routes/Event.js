@@ -3,7 +3,7 @@ import axios from 'axios';
 import {useParams} from 'react-router-dom';
 
 const Event = () => {
-	const APIKEY=process.env.REACT_APP_API_KEY;
+	const APIKEY=process.env.REACT_APP_MOVIE_API_KEY;
 	const {id}=useParams();
 	const [eventMovie, setEventMovie]=useState(null);
 	const [loading, setLoading]=useState(true);
