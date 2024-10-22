@@ -12,7 +12,7 @@ const Events = () => {
 			console.log(response.data.results)
 		})
 		
-	},[]);
+	},[APIKEY]);
 	return (
 		<>
 			<div className='eventsWrap'>

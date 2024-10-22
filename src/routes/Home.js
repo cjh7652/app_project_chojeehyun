@@ -27,7 +27,7 @@ const Home = () => {
 
 	useEffect(()=>{
 		getMovies();
-	}, []);
+	}, [APIKEY]);
 
 	const handleLodeMore=()=>{
 		setVisibleMovies((prevVisible) =>prevVisible+moviesPerPage );

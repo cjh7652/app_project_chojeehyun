@@ -13,7 +13,7 @@ const Event = () => {
 			console.log(response.data)
 			setLoading(false)
 		})
-	}, [id]);
+	}, [id, APIKEY]);
 	return (
 		<div className='eventWrap'>
 			{
